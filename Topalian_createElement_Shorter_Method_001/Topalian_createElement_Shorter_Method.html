@@ -1,0 +1,75 @@
+<!-- Dedicated to God the Father -->
+
+<!-- All Rights Reserved Christopher Andrew Topalian Copyright 2000-2023 -->
+
+<!-- https://github.com/ChristopherTopalian -->
+
+<!-- https://github.com/ChristopherAndrewTopalian -->
+
+<!-- Topalian_createElement_Shorter_Method.html -->
+
+<!-- Version 001 -->
+
+<html>
+<head>
+<title> Topalian createElement Shorter Method </title>
+
+<style>
+
+body
+{
+    padding: 10px;
+    background-color: rgb(50, 50, 50);
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+}
+
+div
+{
+    padding-top: 10px;
+}
+
+</style>
+
+<script>
+// shorter method for using document.getElementById 
+function ge(whichId)
+{
+    return document.getElementById(whichId);
+}
+
+// shorter method for using document.createElement 
+function ce(whichType)
+{
+    return document.createElement(whichType);
+}
+
+function showText(whichText)
+{
+    // if element exists
+    if (ge("theTextDiv"))
+    {
+        // remove the element
+        ge("theTextDiv").remove();
+    }
+
+    //-//
+
+    // create element using the shorter method
+    let theTextDiv = ce("div");
+    theTextDiv.id = "theTextDiv";
+    theTextDiv.textContent = whichText;
+    document.body.append(theTextDiv);
+}
+
+</script>
+
+<body>
+
+<button onclick = "showText('Hydrogen');"> H </button>
+
+<button onclick = "showText('Helium');"> He </button>
+
+</body>
+
+</html>
