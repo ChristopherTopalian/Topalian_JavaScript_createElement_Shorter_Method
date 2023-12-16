@@ -1,0 +1,88 @@
+<!-- Dedicated to God the Father -->
+
+<!-- All Rights Reserved Christopher Andrew Topalian Copyright 2000-2023 -->
+
+<!-- https://github.com/ChristopherTopalian -->
+
+<!-- https://github.com/ChristopherAndrewTopalian -->
+
+<!-- Topalian_createElement_Shorter_Method.html -->
+
+<!-- Version 002 -->
+
+<html>
+<head>
+<title> Topalian createElement Shorter Method </title>
+
+<style>
+
+body
+{
+    padding: 10px;
+    background-color: rgb(50, 50, 50);
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+}
+
+div
+{
+    padding-top: 10px;
+}
+
+</style>
+
+<script>
+
+// document.getElementById shortcut
+function ge(whichId)
+{
+    let result = document.getElementById(whichId);
+
+    return result;
+}
+
+// document.createElement shortcut
+function ce(whichType)
+{
+    let result = document.createElement(whichType);
+
+    return result;
+}
+
+// document.body.append shortcut
+function ba(whichElement)
+{
+    let result = document.body.append(whichElement);
+
+    return result;
+}
+
+function showText(whichText)
+{
+    // if element exists
+    if (ge("theTextDiv"))
+    {
+        // remove the element
+        ge("theTextDiv").remove();
+    }
+
+    //-//
+
+    // creates a div using shortcuts
+    let theTextDiv = ce("div");
+    theTextDiv.id = "theTextDiv";
+    theTextDiv.textContent = whichText;
+    ba(theTextDiv);
+}
+
+</script>
+
+<body>
+
+<button onclick = "showText('Hydrogen');"> H </button>
+
+<button onclick = "showText('Helium');"> He </button>
+
+</body>
+
+</html>
